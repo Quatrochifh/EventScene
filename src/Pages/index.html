@@ -1,0 +1,3001 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Clube interativo de experiências e serviços exclusivos para médicos.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>metaDoctors</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/icone-logo.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/icone-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/icone-logo.png">
+    <link rel="manifest" href="assets/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/application.css">
+    <link rel="stylesheet" href="assets/font/fonts.css">
+    <!-- owlcarousel -->
+    <link rel="stylesheet" href="assets/vendor/owlcarousel/dist/assets/owl.carousel.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/planos.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MQXKF3RN');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZGHZL9H9X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NZGHZL9H9X');
+    </script>
+
+
+
+
+
+
+    <!-- Alterar entre carrossel mobile e desktop -->
+    <style>
+        .hero-slider {
+            display: none !important;
+        }
+    </style>
+
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
+
+        .content-tabs {
+            width: 100%;
+            margin: 0 auto;
+            /* padding: 20px; */
+        }
+
+        /* ------------------- */
+        /* PEN STYLES      -- */
+        /* ----------------- */
+
+        /* MAKE IT CUTE ----- */
+        .tabs {
+            position: relative;
+            display: flex;
+            /* min-height: 300px; */
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+        }
+
+        .tabby-tab {
+            flex: 1;
+        }
+
+        .tabby-tab label {
+            display: block;
+            box-sizing: border-box;
+            /* tab content must clear this */
+            height: 40px;
+
+            padding: 10px;
+            text-align: center;
+            background: #9768D1;
+            color: white;
+            cursor: pointer;
+            transition: background 0.5s ease;
+            padding: 18px;
+
+        }
+
+        .titulo {
+            /* display: flex; */
+            display: flex;
+            /* align-items: center; */
+            /* flex-direction: row; */
+            /* justify-content: flex-start; */
+            gap: 5px;
+        }
+
+
+        .titulo p {
+            margin: 0px;
+        }
+
+        .titulo img {
+            margin: 0px;
+        }
+
+        .tabby-tab label:hover {
+            background: #7B52AB;
+        }
+
+        .tabby-content {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 40px;
+            /* padding: 20px; */
+            border-radius: 0 0 8px 8px;
+            /* background: #553285; */
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            opacity: 0;
+            transform: scale(0.1);
+            transform-origin: top left;
+
+        }
+
+        .value-premium {
+            display: none;
+        }
+
+        .tabby-content img {
+            float: left;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        /* css */
+        .content .form h3 {
+            color: #191875;
+            font-size: 1.7rem;
+            text-align: left;
+            margin-bottom: 0px;
+            font-weight: 300;
+        }
+
+        .content .servicos-digitais h3 {
+            color: #F8F9FF;
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+
+        .content .servicos .bloco {
+            min-height: auto;
+            max-height: auto;
+            height: 370px;
+            padding: 20px 37px;
+            border-radius: 30px;
+            background: transparent linear-gradient(130deg, #F2F4FF 0%, #C6CEFF 100%) 0% 0% no-repeat padding-box;
+            -webkit-box-shadow: 0px 27px 50px #B0B7E258;
+            box-shadow: 0px 27px 50px #B0B7E258;
+            z-index: 2;
+            -webkit-transition: 0.3s all;
+            transition: 0.3s all;
+        }
+
+        .content .servicos-digitais {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-around;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            background: linear-gradient(271deg, #ff00f7 -35%, blue 100%);
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            margin-top: 60px;
+            border-radius: 40px;
+            z-index: 2;
+        }
+
+        .content .servicos .bloco img {
+            margin-top: 0px;
+            height: 100px;
+
+
+            
+        }
+
+        .content .bloco-2 {
+            margin-top: 400px;
+        }
+
+        .accordions-benefits-icons img {
+            width: 45px;
+        }
+
+        .content .content-medico .info-medico .content .lista-medico {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            width: 75%;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            gap: 70px;
+            margin-top: 35px;
+        }
+
+        .content .hero-slider {
+            width: 100%;
+            height: 330px;
+            border-radius: 39px;
+            padding-left: 0px;
+            margin-bottom: 180px;
+            padding-right: 0px;
+        }
+
+        .testimonials-slider {
+            padding-top: 0px;
+        }
+
+        .conteiner-chatGPT {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .chatGptnoimage {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 5px;
+            z-index: 99;
+            width: 192%;
+        }
+
+        .contSobreGpt {
+            border-radius: 20px;
+            background: transparent linear-gradient(130deg, #F2F4FF 0%, #C6CEFF 100%) 0% 0% no-repeat padding-box;
+            padding: 35px 35px;
+        }
+
+        .contSobreGpt h3 {
+            font-weight: 700;
+            font-size: 30px;
+            color: #191875;
+        }
+
+        .contSobreGpt p {
+            color: #191875;
+            font-size: 1.3rem;
+            line-height: 25px;
+        }
+
+        .img-chat {
+            margin-top: 6%;
+            margin-bottom: 2%;
+            width: 33%;
+        }
+
+
+        .image {
+            padding-top: 69px;
+        }
+
+        .image img {
+            max-width: 778px;
+            margin-left: 24%;
+        }
+
+        .infosGpt {
+            border-radius: 20px;
+            margin-top: 1.5%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            box-shadow: none;
+            gap: 25px;
+            padding: 14px 35px;
+            background: transparent linear-gradient(130deg, #F2F4FF 0%, #C6CEFF 100%) 0% 0% no-repeat padding-box;
+        }
+
+        .infosGpt img {
+            width: 60px;
+        }
+
+        .infosGpt h3 {
+            font-weight: 700;
+            font-size: 30px;
+            color: #191875;
+        }
+
+
+        .infosGpt p {
+            /* font-family: 'Infra'; */
+            font-weight: normal;
+            margin-bottom: 0px;
+            font-size: 1.3rem;
+            color: #191875;
+            font-size: 1.3rem;
+            line-height: 25px;
+        }
+
+        .escritaGpt strong {
+            color: #191875;
+            font-size: 1.4rem;
+            line-height: 25px;
+        }
+
+
+        .item p b {
+            font-size: 1.4rem;
+        }
+
+
+        /* css */
+
+
+        /* MAKE IT WORK ----- */
+
+        .tabby-tab [type=radio] {
+            display: none;
+        }
+
+        [type=radio]:checked~label {
+            background: #553285;
+            z-index: 2;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 18px;
+        }
+
+        [type=radio]:checked~label~.tabby-content {
+            z-index: 1;
+
+            /* show/hide */
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .list-plans {
+            display: none !important;
+        }
+
+        .item {
+            width: 100% !important;
+            background: transparent linear-gradient(139deg, #F2F4FF 0%, #C6CEFF 100%) 0% 0% no-repeat padding-box;
+            -webkit-box-shadow: 0px 27px 50px #B0B7E258;
+            box-shadow: 0px 27px 50px #B0B7E258;
+            /* border-radius: 40px; */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            -webkit-transition: 0.3s all;
+            transition: 0.3s all;
+            border-radius: 0px 0px 40px 40px;
+        }
+
+        .info {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 44px 30px 0px 30px;
+        }
+
+        .btn-faca-parte {
+            background: linear-gradient(271deg, #ff00f7 0%, blue 100%);
+            color: #fff;
+            font-size: 1.1rem;
+            text-align: center;
+            border: none;
+            text-transform: uppercase;
+            padding: 18px 10px;
+            border-radius: 18px;
+            width: auto;
+            max-width: 220px;
+            padding: 15px 41px;
+            text-decoration: none;
+            -webkit-transition: 0.3s all;
+            transition: 0.3s all;
+        }
+
+        .btn-faca-parte:hover {
+            background: linear-gradient(271deg, #ff00f7 0%, blue 100%);
+            color: #fff;
+            font-size: 1.1rem;
+            text-align: center;
+            border: none;
+            text-transform: uppercase;
+            padding: 18px 10px;
+            border-radius: 18px;
+            width: auto;
+            max-width: 220px;
+            padding: 15px 41px;
+            text-decoration: none;
+            -webkit-transition: 0.3s all;
+            transition: 0.3s all;
+        }
+
+        @media (max-width: 479px) {
+            .btn-faca-parte {
+                width: 100%;
+                max-width: 100%;
+                margin-top: 0;
+            }
+        }
+
+        .info img {
+            width: 55px;
+            margin-bottom: 15px;
+        }
+
+        .info h2 {
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: #191875 !important;
+            letter-spacing: -.5px;
+            margin-bottom: 12px;
+        }
+
+        .info p {
+            margin-bottom: 0px;
+            font-size: .75rem;
+            line-height: 12px;
+            text-align: center;
+            color: #191875;
+            font-weight: 300;
+        }
+
+        .beneficios {
+            margin-top: 27px;
+            padding: 0 33px;
+            margin-bottom: 27px;
+        }
+
+        .beneficios .accordion {
+            background-color: transparent;
+        }
+
+        .beneficios .accordion .accordion-item {
+            background: transparent;
+            border: 0px;
+            margin-bottom: 5px;
+        }
+
+        .beneficios .accordion .accordion-header {
+            background-color: transparent;
+            margin-bottom: 0px;
+        }
+
+        .beneficios .accordion #headingOne button {
+            color: #B0B7E2 !important;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            width: 100%;
+            padding: 12.5px 22px;
+        }
+
+        .beneficios .accordion #headingOne button .titulo {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .beneficios .accordion #headingOne button .titulo img {
+            width: 16px;
+            margin-right: 10px;
+        }
+
+        .content .content-super-app .super-app h3 {
+            color: #fff;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+
+        .beneficios .accordion #headingOne button .titulo p {
+            margin-bottom: 0px;
+            color: #B0B7E2;
+        }
+
+        .footer .content h3 {
+            color: #191875;
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 0px;
+        }
+
+        .beneficios .accordion #headingOne button .miuda {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            margin-right: 0px;
+            align-items: center;
+            gap: 5px;
+
+        }
+
+        .content #sign {
+            width: 100%;
+            max-width: 100%;
+            /* margin-top: 45px; */
+            padding: 45px !important;
+            border-radius: 30px;
+        }
+
+
+        .beneficios .accordion #headingOne button .miuda .letra-miuda {
+            font-size: .6rem;
+            margin: 0px;
+        }
+
+        .miuda .letra-miuda p {
+            margin: 0px;
+        }
+
+        .beneficios .accordion #headingOne button .miuda img {
+            width: 13px;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            margin-left: 5px;
+            margin: 0px;
+        }
+
+        .miuda1 p {
+            margin: 0px;
+        }
+
+        .beneficios .accordion .accordion-header button .miuda1 {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 11px;
+            background-color: #0000FF;
+            color: #fff;
+            padding: 0px 10px;
+            border-radius: 14px;
+            height: 17px;
+            margin: 0px;
+            justify-content: space-around;
+
+        }
+
+
+
+        .accordion-button {
+            position: relative;
+            /* display: flex; */
+            display: grid;
+            align-items: center;
+            width: 100%;
+            padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+            font-size: 1rem;
+            color: var(--bs-accordion-btn-color);
+            text-align: left;
+            background-color: var(--bs-accordion-btn-bg);
+            border: 0;
+            border-radius: 10px;
+            overflow-anchor: none;
+            transition: var(--bs-accordion-transition);
+            grid-template-columns: 2fr 2fr 10%;
+            gap: 4px;
+        }
+
+        .beneficios .accordion .accordion-body {
+            background: #cccbf2;
+            width: 93%;
+            margin: 0 auto;
+            border-radius: 0px 0px 15px 15px;
+            margin-top: -4px;
+            line-height: 16px;
+            padding: 23px;
+            margin-top: -20px;
+        }
+
+        .beneficios .accordion .accordion-body strong {
+            font-weight: 300;
+            color: #191875;
+            font-size: .9rem;
+        }
+
+
+
+
+        .footer-plan {
+            background-color: #B0B7E2;
+            border-radius: 0 0px 30px 30px;
+            padding: 22px 41px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+
+        .footer-plan h2 {
+            font-weight: 700;
+            letter-spacing: -1px;
+            font-size: 1.65rem;
+            margin-bottom: 0px;
+            color: #fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-bottom: 20px !important;
+        }
+
+
+        .footer-plan a {
+            text-transform: uppercase;
+            color: #fff;
+            background: linear-gradient(271deg, #ff00f7 0%, blue 100%);
+            text-decoration: none;
+            border-radius: 16px;
+            font-size: .75rem;
+            padding: 11px 23px;
+        }
+
+        .planos h2 {
+            margin-bottom: 20px !important;
+        }
+
+
+
+        .content .content-medico .info-medico .content .lista-medico .column-two .item {
+            padding: 22px;
+            border-radius: 20px;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            color: #b368fb;
+            justify-content: flex-start;
+        }
+
+        .content .planos h2 {
+            color: #fff;
+            font-weight: 900;
+            letter-spacing: -.6px;
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+
+
+        .content .content-medico {
+            height: 900px;
+            position: relative;
+        }
+
+        .accordions-benefits-btn {
+            background-color: #c2c7e8 !important;
+        }
+
+
+        .content .content-medico .info-medico .content .lista-medico .column-two .item p {
+            color: #191875;
+        }
+
+        .content .content-medico .info-medico .content .lista-medico .column-one .item p {
+            color: #191875;
+        }
+
+
+        .content .content-medico .info-medico .content .lista-medico .column-one .item {
+            padding: 22px;
+            border-radius: 18px;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            color: #b368fb;
+            justify-content: flex-start;
+        }
+
+        .accordion-section ul {
+            margin-bottom: 1rem;
+            list-style: none;
+            margin-top: 20px;
+            line-height: 25px;
+            font-size: 14px;
+            color: #6c6ca3;
+        }
+
+        footer {
+            display: grid;
+            /* flex-direction: row; */
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 50px;
+            color: white;
+        }
+
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-logo img {
+            width: 170px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .footer-social {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        .footer-social a {
+            background: white;
+            border-radius: 100%;
+        }
+
+
+        .footer-social img {
+            width: 40px;
+            height: 40px;
+            /* background: #fff7f2; */
+            /* padding: 0px; */
+            /* padding-top: 20px; */
+            padding: 10px;
+            /* border-radius: 100px; */
+        }
+
+        .parceiros {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .parceiros h3 {
+            color: #fff;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            /* line-height: 32px; */
+        }
+
+        .parceiros-logo {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            background: transparent linear-gradient(96deg, #F2F4FF 0%, #C6CEFF 100%) 0% 0% no-repeat padding-box;
+            border-radius: 30px;
+            padding: 50px;
+            justify-items: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .parceiros-logo img {
+            max-width: 170px;
+        }
+
+        .content-super-app {
+            border-radius: 30px !important;
+        }
+
+        @media (min-width: 1900px) {
+            .content .bloco-2 {
+                margin-top: 100px;
+            }
+        }
+
+        .naoMostrar {
+            display: none !important;
+        }
+
+        .mostrar {
+            display: block;
+        }
+
+
+
+
+        @media (max-width: 800px) {
+
+            .header .content h2 {
+                font-size: 2rem;
+                line-height: 2rem;
+            }
+
+            .content .content-super-app .super-app h3 {
+                color: #fff;
+                font-size: 1.5rem;
+                margin-bottom: 25px;
+                font-weight: 400;
+                line-height: 28px;
+            }
+
+            .footer .content h3 {
+                color: #191875;
+                font-size: 1.5rem;
+                line-height: 1.8rem;
+                font-weight: 400;
+                margin-bottom: 0px;
+            }
+
+            .content .form h3 {
+                margin-bottom: 50px;
+                font-size: 1.5rem;
+            }
+
+            .header .content p {
+                color: #fff;
+                text-align: left;
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+
+            .parceiros h3 {
+                color: #fff;
+                text-align: center;
+                font-size: 1.8rem;
+                margin-bottom: 60px;
+                /* line-height: 32px; */
+                margin-top: 70px;
+            }
+
+
+            .content .content-medico .info-medico .content .lista-medico .column-one {
+                gap: 20px;
+                margin-top: -100px;
+            }
+
+            .content .content-medico .img-medico {
+                width: 100%;
+                position: relative;
+                bottom: -10px;
+                left: 20px;
+                z-index: 0;
+                -webkit-animation: myAnim 3s linear 0s infinite normal forwards;
+                animation: myAnim 3s linear 0s infinite normal forwards;
+                scale: 1.5;
+            }
+
+            .naoMostrarMobile {
+                display: none !important;
+            }
+
+            .mostrarMobile {
+                display: block !important;
+            }
+
+            .content .content-medico .info-medico .content h3 {
+                text-align: center;
+            }
+
+
+            .footer .content {
+                width: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: flex-start;
+                margin-bottom: 30px;
+            }
+
+            .content .content-medico .img-medico1 {
+                position: relative;
+                bottom: unset;
+                left: unset;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                margin-top: 40px;
+                /* width: 100%; */
+                margin-left: 35px;
+            }
+
+            .parceiros h3 {
+                color: #fff;
+                text-align: center;
+                font-size: 1.8rem;
+                margin-bottom: 60px;
+                /* line-height: 32px; */
+            }
+
+            .content .bloco-2 {
+                margin-top: 0 !important;
+            }
+
+            .content .servicos-digitais h3 {
+                margin-bottom: 0px;
+                margin-top: 15px;
+                font-size: 1.5rem;
+            }
+
+
+            .owl-item img {
+                width: 75px;
+            }
+
+            .header .container {
+                /* padding-top: 75px; */
+                padding-bottom: 100px;
+            }
+
+            .footer-logo {
+                display: flex;
+                flex-direction: column;
+                /* gap: 15px; */
+                align-items: center;
+            }
+
+            .owl-carousel.owl-drag .owl-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* height: 200px; */
+            }
+
+            .owl-carousel .owl-stage {
+                background: linear-gradient(249deg, #C6CEFF 0%, #F2F4FF 100%);
+                /* height: 200px; */
+            }
+
+            .owl-stage {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* background: linear-gradient(249deg, #C6CEFF 0%, #F2F4FF 100%); */
+            }
+
+            .bg-cinza {
+                background: linear-gradient(249deg, #C6CEFF 0%, #F2F4FF 100%);
+                border-radius: 30px;
+            }
+
+            .owl-carousel .owl-stage-outer {
+                position: relative;
+                overflow: hidden;
+                -webkit-transform: translate3d(0, 0, 0);
+                border-radius: 20px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: flex-start;
+                align-items: stretch;
+            }
+
+
+            .servicos-digitais {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+            }
+
+            .content .content-medico {
+                height: auto !important;
+            }
+
+            .content .content-medico .img-medico1 {
+                scale: 1.6;
+            }
+
+            .content .content-medico .info-medico .content button {
+                width: 90%;
+                z-index: 99;
+                margin-bottom: 100px;
+            }
+
+            .md-logo-branca {
+                width: 300px;
+                margin: 0 auto;
+                display: block;
+            }
+
+            footer {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                gap: 20px;
+            }
+
+            .parceiros-logo {
+                display: none;
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+        @media (min-width: 576px) {
+
+            .list-plans {
+                display: flex !important;
+            }
+
+            .content-tabs {
+                display: none !important;
+            }
+
+            .hero-slider {
+                display: block !important;
+            }
+
+            .hero-slider-mobile {
+                display: none !important;
+            }
+
+            .toggle-btn {
+                position: relative;
+                z-index: 1;
+                top: 65px;
+                display: flex;
+                text-align: center;
+                grid-template-columns: 1fr 1fr 1fr;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
+            }
+
+            .servicos-digitais {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        /* BREAKPOINTS ----- */
+        @media screen and (max-width: 767px) {
+            .tabs {
+                min-height: 1100px;
+            }
+
+            .servicos-digitais {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .tabs {
+                min-height: 1100px;
+            }
+
+            .tabby-tab label {
+                height: 60px;
+            }
+
+            .tabby-content {
+                top: 60px;
+            }
+
+            .tabby-content img {
+                float: none;
+                margin-right: 0;
+                /* margin-bottom: 20px; */
+            }
+
+            .servicos-digitais {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .content .content-medico .info-medico .content .lista-medico {
+                /* gap: 20px; */
+                width: 100% !important;
+            }
+
+            .owl-carousel .owl-item img {
+                border-radius: 0px;
+                margin-left: 2px;
+                width: 101%;
+            }
+
+            .footer-logo {
+                display: flex;
+                flex-direction: column;
+                /* gap: 15px; */
+                align-items: center;
+            }
+
+        }
+
+        .hero-title {
+            color: #ffffff;
+            font-weight: 400;
+            width: 500px;
+            max-width: 100%;
+        }
+
+        .hero-description {
+            color: #ffffff;
+            width: 550px;
+            max-width: 100%;
+        }
+
+        .block-titles {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: normal;
+        }
+
+        @media (min-width: 480px) {
+            .block-titles {
+                font-size: 28px;
+            }
+        }
+
+        .button-cta-with-gradient {
+            background: linear-gradient(271deg, #ff00f7 0%, blue 100%);
+            color: #fff;
+            font-size: 18px !important;
+            text-align: center;
+            border: none;
+            text-transform: uppercase;
+            padding: 18px 10px;
+            border-radius: 18px;
+            width: 100%;
+            max-width: 100%;
+            padding: 15px 41px;
+            text-decoration: none;
+            -webkit-transition: 0.3s all;
+            transition: 0.3s all;
+            font-weight: 600;
+            display: block;
+            border-radius: 16px;
+        }
+
+        @media (min-width: 480px) {
+            .button-cta-with-gradient {
+                width: 250px;
+            }
+        }
+
+        .button-cta-with-gradient:hover {
+            color: #ffffff;
+        }
+
+        .gradient-box__title {
+            max-width: 100%;
+        }
+
+        .md-logo-branca {
+            max-width: 80%;
+            margin-bottom: 2%;
+        }
+
+        @media (min-width: 480px) {
+            .gradient-box__title {
+                width: 850px;
+            }
+
+            .md-logo-branca {
+                max-width: 20%;
+            }
+
+            .content .servicos-digitais {
+                margin-top: -70px;
+            }
+        }
+
+        @media (max-width: 479px) {
+            .servicos {
+                margin-top: 0 !important;
+            }
+        }
+
+        .metaBitsContainer {
+            margin: 72px 0 0px 0;
+        }
+
+        @media (min-width: 767px) {
+            .metaBitsContainer {
+                margin: 48px 0 168px 0;
+            }
+        }
+
+        .partners__title {
+            text-align: center;
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 44px;
+        }
+
+        @media (min-width: 767px) {
+            .partners__title {
+                margin-bottom: 14px;
+            }
+        }
+
+        .testimonials-slider {
+            padding-top: 108px;
+        }
+
+        .testimonials-slider__wrapper {
+            background-color: #D6DCFF;
+            border-radius: 39px;
+            padding: 48px 32px;
+        }
+
+        @media (min-width: 767px) {
+            .testimonials-slider__wrapper {
+                padding: 48px 72px;
+            }
+        }
+
+        .testimonials-slider__wrapper__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (min-width: 767px) {
+            .testimonials-slider__wrapper__content {
+                flex-direction: row;
+            }
+        }
+
+        .testimonials-slider__image {
+            height: 150px !important;
+            width: 150px !important;
+            border-radius: 50% !important;
+        }
+
+        .testimonials-slider__texts {
+            color: #050062;
+        }
+
+        @media (min-width: 767px) {
+            .testimonials-slider__texts {
+                margin-left: 36px;
+            }
+        }
+
+        .texts__name {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        @media (min-width: 767px) {
+            .texts__name {
+                text-align: inherit;
+            }
+        }
+
+        .texts__title {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .texts__company {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .stores-application {
+            display: flex;
+            flex-direction: column;
+            color: #ffffff;
+            font-size: 28px;
+            margin-top: 48px;
+            margin-bottom: -14px;
+        }
+
+        @media (min-width: 767px) {
+            .stores-application {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 64px;
+                margin-bottom: 72px;
+            }
+        }
+
+        .stores-application__buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (min-width: 767px) {
+            .stores-application__buttons {
+                width: 720px;
+                flex-direction: row;
+                justify-content: center;
+                padding-top: 20px;
+            }
+        }
+
+        .stores-application__text {
+            max-width: 100%;
+            padding: 18px 0px;
+        }
+
+        @media (min-width: 767px) {
+            .stores-application__text {
+                border-right: 1px solid #ffffff;
+                padding-right: 50px;
+                width: 320px;
+            }
+        }
+
+
+        .stores-application__text h3 {
+            padding-bottom: 12px;
+            margin: 0;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        @media (min-width: 767px) {
+            .stores-application__text h3 {
+                text-align: right;
+                padding-bottom: 0px;
+            }
+        }
+
+        .stores-application__buttons img {
+            padding-bottom: 24px;
+            width: 200px;
+            max-width: 100%;
+            display: block;
+        }
+
+        @media (min-width: 767px) {
+            .stores-application__buttons img {
+                padding-right: 24px;
+            }
+        }
+
+
+
+        .stores-application__buttons a {
+            text-decoration: none;
+            display: block;
+        }
+    </style>
+
+    <style>
+        /* BLOCO DO CHATGPT BLOCO DO CHATGPT BLOCO DO CHATGPT BLOCO DO CHATGPT BLOCO DO CHATGPT BLOCO DO CHATGPT BLOCO DO CHATGPT */
+
+        @media (max-width: 576px) {
+            .conteiner-chatGPT {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                justify-content: center;
+            }
+
+            .chatGptnoimage {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                gap: 5px;
+                z-index: 99;
+                width: 100%;
+            }
+
+            .infosGpt img {
+                width: 53px;
+            }
+
+            .infosGpt {
+                border-radius: 20px;
+                height: 18%;
+                margin-top: 1.5%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                box-shadow: none;
+                gap: 25px;
+                padding: 14px 10px;
+                background: transparent linear-gradient(130deg, #F2F4FF 0%, #C6CEFF 100%) 0% 0% no-repeat padding-box;
+            }
+
+            .infosGpt p {
+                font-weight: normal;
+                margin-bottom: 0px;
+                font-size: 1.3rem;
+                color: #191875;
+                font-size: 1.1rem;
+                line-height: 25px;
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQXKF3RN" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section class="header">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img data-aos-duration="600" data-aos="fade-down" data-aos-delay="300"
+                        src="assets/img/logo-header.png" alt="">
+
+                    <div class="group-buttons">
+                        <div data-aos-duration="1200" data-aos="fade-down" data-aos-delay="700">
+                            <a class="one" href="https://metadoctors.com.br/app/">Login <img src="
+                                assets/img/box-arrow-in-right.png" alt=""></a>
+                        </div>
+                        <div data-aos-duration="1200" data-aos="fade-down" data-aos-delay="900">
+                            <a href="https://metadoctors.com.br/app/cadastre-se/">Cadastre-se Gratuitamente<img
+                                    src="assets/img/ico-sign.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="group-buttons-mob">
+                        <div data-aos-duration="1200" data-aos="fade-down" data-aos-delay="700">
+                            <a class="one" href="https://metadoctors.com.br/app/"><img src="
+                              assets/img/box-arrow-in-right.png" alt=""></a>
+                        </div>
+                        <div data-aos-duration="1200" data-aos="fade-down" data-aos-delay="900">
+                            <a href="https://metadoctors.com.br/app/cadastre-se/"><img src="assets/img/ico-sign.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos-duration="900" data-aos="fade-right" data-aos-delay="900" class="content">
+                    <h1 class="hero-title">
+                        Clube interativo de experiências e serviços <b>exclusivos para médicos</b>.
+                    </h1>
+                    <p class="hero-description">
+                        Poupe seu tempo com o <b>metaDoctors</b>. O <b>primeiro Super App para Médicos</b> gratuito com
+                        ferramentas inovadoras, conteúdos tecnológicos, conexões profissionais, cursos, eventos,
+                        benefícios e descontos em grandes marcas, tudo isso num só lugar!
+                    </p>
+
+                </div>
+                <div data-aos-duration="1000" data-aos="fade-right" data-aos-delay="1200" class="cta">
+                    <a href="https://metadoctors.com.br/app/cadastre-se/">Faça parte</a>
+                </div>
+
+                <div class="" style="width: 100%; padding: 0;">
+                    <div id="" data-aos-duration="200" data-aos="fade-right" data-aos-delay="100"
+                        class="parceiros content">
+                        <h3 class="block-titles">Super App para Médicos com dezenas de funcionalidades</h3>
+                        <div class="hero-slider owl-carousel">
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/criador-de-conteudo/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/criador-de-conteudo_desktop.png"
+                                        alt="metaDoctors: Criador de Conteúdo">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/healthy/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/healthy_desktop.png"
+                                        alt="metaDoctors: Healthy">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/doc">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/doc_desktop.png"
+                                        alt="DOC - Editora DOC">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/ciatrip/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/banners_beneficios-Ciatrip.png"
+                                        alt="DOC - Editora DOC">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/medicamentos/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/guia-da-farmacia_desktop.png"
+                                        alt="metaDoctors: Guia da Farmácia">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/convexa">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/convexa_desktop.png"
+                                        alt="metaDoctors: Convexa investimentos - BTG Pactual">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/mistral/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/mistral_desktop.png"
+                                        alt="Mistral - desconto em vinhos">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/sleepup/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/sleepup_desktop.png"
+                                        alt="metaDoctors: Sleepup">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/sample4doc/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/sample4doc_desktop.png"
+                                        alt="metaDoctors: sample4doc">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/hsm/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/hsm_desktop.png"
+                                        alt="metaDoctors: hsm">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/mysmartclinic/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/parceiros/banners_beneficiosMysmartclinic.png"
+                                        alt="metaDoctors: hsm">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/v4/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/v4_desktop.png"
+                                        alt="metaDoctors: v4">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/webevent/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/parceiros/banners_beneficiosWebevent.png"
+                                        alt="metaDoctors: v4">
+                                </a>
+                            </div>
+
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/parceiros/livingtv/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/parceiros/banners_beneficios_Living_Tv.png"
+                                        alt="metaDoctors: v4">
+                                </a>
+                            </div>
+                            <!-- <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/webevent/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/parceiros/banners_beneficios_Lidio_Carraro.png"
+                                        alt="metaDoctors: v4">
+                                </a>
+                            </div> -->
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/parceiros/gdd-advogados/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/parceiros/banners_beneficios_GDD_advogados.png"
+                                        alt="metaDoctors: v4">
+                                </a>
+                            </div>
+                            <!-- <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/webevent/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/parceiros/banners_beneficios_Doctor_ID.png"
+                                        alt="metaDoctors: v4">
+                                </a>
+                            </div> -->
+                        </div>
+                        <div class="hero-slider-mobile owl-carousel" style="padding: 0px;">
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/criador-de-conteudo/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/criador-de-conteudo_mobile.png"
+                                        alt="metaDoctors: Criador de Conteúdo">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/healthy/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/healthy_mobile.png"
+                                        alt="metaDoctors: Healthy">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/doc">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/doc_mobile.png"
+                                        alt="DOC - Editora DOC">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/ciatrip/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/banners_beneficios_mobile_Ciatrip.png"
+                                        alt="CIATRIP">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/medicamentos/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/guia-da-farmacia_mobile.png"
+                                        alt="metaDoctors: Guia da Farmácia">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/convexa">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/convexa_mobile.png"
+                                        alt="metaDoctors: Convexa investimentos - BTG Pactual">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/mistral/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/mistral_mobile.png"
+                                        alt="Mistral - desconto em vinhos">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/mysmartclinic/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/parceiros/banners_beneficios_mobileV2Mysmartclinic.png"
+                                        alt="metaDoctors: hsm">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/sleepup/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/sleepup_mobile.png"
+                                        alt="metaDoctors: Sleepup">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/sample4doc/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/sample4doc_mobile.png"
+                                        alt="metaDoctors: sample4doc">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/hsm/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/hsm_mobile.png"
+                                        alt="metaDoctors: hsm">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/v4/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/v4_mobile.png"
+                                        alt="metaDoctors: v4">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/webevent/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/parceiros/banners_beneficios_mobileV2Webevent.png"
+                                        alt="metaDoctors: v4">
+                                </a>
+                            </div>
+
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/parceiros/livingtv/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/parceiros/banners_beneficios_mobile_V2_Living_TV.png"
+                                        alt="metaDoctors: v4">
+                                </a>
+                            </div>
+                            <!-- <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/webevent/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/parceiros/banners_beneficios_mobile_V2_Lidio_Carraro.png"
+                                        alt="metaDoctors: v4">
+                                </a>
+                            </div> -->
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/parceiros/gdd-advogados/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/parceiros/banners_beneficios_mobile_V2_GDD_Advogados.png"
+                                        alt="metaDoctors: v4">
+                                </a>
+                            </div>
+                            <!-- <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/webevent/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/parceiros/banners_beneficios_mobile_V2_Doctor_ID.png"
+                                        alt="metaDoctors: v4">
+                                </a>
+                            </div> -->
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <section class="content">
+            <div class="container">
+                <div data-aos="fade-up" data-aos-duration="" data-aos-delay="1100" class="row bloco-2">
+                    <div class="stores-application">
+                        <div class="stores-application__text">
+                            <h3><b>Baixe nosso app</b> ou acesse o webapp</h3>
+                        </div>
+                        <div class="stores-application__buttons">
+                            <a href="https://apps.apple.com/br/app/metadoctors/id6467137623" target="_blank">
+                                <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/appstore-icon.png"
+                                    alt="Botão que levará para o app metaDoctors na App Store" />
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.digitalsolvers.metadoctors&hl=pt_BR&gl=US"
+                                target="_blank">
+                                <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/googlestore-icon.png"
+                                    alt="Botão que levará para o app metaDoctors na play Store" />
+                            </a>
+                            <a href="https://metadoctors.com.br/app/wp-login.php" target="_blank">
+                                <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/webapp-icon.png"
+                                    alt="Botão que levará para o webApp" />
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <h3 class="partners__title">Nossos parceiros</h3>
+                    <div class="parceiros-logo ">
+                        <img src="/assets/img/guia-da-farmacia-min.png" alt="">
+                        <img src="/assets/img/inter-player-min.png" alt="">
+                        <img src="/assets/img/doc-min.png" alt="" width="120">
+                        <img src="/assets/img/hsm-min.png" alt="" width="120">
+                        <img src="/assets/img/microsoft-min.png" alt="">
+                        <img src="/assets/img/v4-min.png" alt="">
+                        <!-- <img src="/assets/img/pronto-light-min.png" alt=""> -->
+                        <img src="/assets/img/mistral-min.png" alt="" width="130">
+                        <img src="/assets/img/sample-4-doc-min.png" alt="" width="180">
+                        <img src="/assets/img/web-event-min.png" alt="">
+                        <img src="/assets/img/convexa-btg-min.png" alt="">
+
+                        <img src="/assets/img/pubmed.png" alt="">
+                        <img src="/assets/img/doctor-financas.png" alt="">
+                        <img src="/assets/img/smartclinic.png" alt="">
+                        <img src="/assets/img/into-health.png" alt="">
+                        <img src="/assets/img/sleep-up.png" alt="">
+
+
+
+                    </div>
+
+                    <div class="hero-slider-mobile owl-carousel" style="padding: 0px;">
+                        <img src="/assets/img/guia-da-farmacia-min.png" alt=""
+                            style="width: 230px !important; margin: 70px;">
+                        <img src="/assets/img/inter-player-min.png" alt=""
+                            style="width: 210px !important; margin: 70px;">
+                        <img src="/assets/img/doc-min.png" alt="" style="width: 140px !important; margin: 70px;">
+                        <img src="/assets/img/hsm-min.png" alt="" style="width: 140px !important; margin: 70px;">
+                        <img src="/assets/img/microsoft-min.png" alt="" style="width: 140px !important; margin: 70px;">
+                        <img src="/assets/img/v4-min.png" alt="" style="width: 180px !important; margin: 70px;">
+                        <!-- <img src="/assets/img/pronto-light-min.png" alt=""
+                            style="width: 200px !important; margin: 70px;"> -->
+                        <img src="/assets/img/mistral-min.png" alt="" style="width: 160px !important; margin: 70px;">
+                        <img src="/assets/img/sample-4-doc-min.png" alt=""
+                            style="width: 200px !important; margin: 70px;">
+                        <img src="/assets/img/web-event-min.png" alt="" style="width: 200px !important; margin: 70px;">
+                        <img src="/assets/img/convexa-btg-min.png" alt="" style="width: 75% !important; margin: 70px;">
+
+                        <img src="/assets/img/pubmed.png" style="width: 75% !important; margin: 70px;" alt="">
+                        <img src="/assets/img/doctor-financas.png" style="width: 75% !important; margin: 70px;" alt="">
+                        <img src="/assets/img/smartclinic.png" style="width: 75% !important; margin: 70px;" alt="">
+                        <img src="/assets/img/into-health.png" style="width: 75% !important; margin: 70px;" alt="">
+                        <img src="/assets/img/sleep-up.png" style="width: 75% !important; margin: 70px;" alt="">
+
+                    </div>
+
+                    <div id="sign" data-aos-duration="200" data-aos="fade-right" data-aos-delay="100" class="form">
+                        <h3 class="block-titles">Junte-se ao metaDoctors <b>gratuitamente</b> e faça parte do <b>futuro
+                                da medicina</b>
+                        </h3>
+                        <!--<form action="">
+                        <input type="text" name="nome" placeholder="Seu nome">
+                        <input type="text" name="e-mail" placeholder="E-mail">
+                    </form>-->
+                        <a class="button-cta-with-gradient" href="https://metadoctors.com.br/app/cadastre-se/">Acesse
+                            Já</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="content-medico">
+                            <div class="col-lg-6 col-md-12">
+                                <img style="margin-left: 2rem !important" id="medico" data-aos-anchor="#sign"
+                                    data-aos-duration="300" data-aos="zoom-in-down" data-aos-delay="600"
+                                    class="img-medico" src="assets/img/medico.png" alt="">
+                            </div>
+                            <div id="info-medico" data-aos-duration="500" data-aos="fade-left" data-aos-delay="800"
+                                class="col-lg-6 col-md-12 info-medico">
+                                <div class="content">
+                                    <h3 data-aos-duration="500" data-aos="fade-left" data-aos-delay="800">O que é o
+                                        Super App metaDoctors?</h3>
+                                    <img style="margin-left: 2rem !important" id="medico" data-aos-anchor="#sign"
+                                        data-aos-duration="300" data-aos="zoom-in-down" data-aos-delay="600"
+                                        class="img-medico naoMostrar mostrarMobile" src="assets/img/medico.png" alt="">
+                                    <!-- <div style="width: 90%;">
+                                  <p>metaDoctors é uma comunidade desenvolvida 
+                                  especialmente para potencializar a prática médica 
+                                  através </br>de ferramentas digitais inovadoras. </p>
+                                  <p><b>Oferecemos uma plataforma rica que combina 
+                                    funcionalidades e serviços exclusivos para médicos. 
+                                    Aqui, você tem acesso a ferramentas inovadoras, 
+                                    uma ampla rede para conexões profissionais, eventos 
+                                    exclusivos, descontos em grandes marcas, cursos diversos e muito mais.</b></p>
+                                </div> -->
+                                    <div class="lista-medico">
+                                        <div class="column-one">
+                                            <div data-aos-duration="300" data-aos="zoom-out" data-aos-delay="600"
+                                                class="item">
+                                                <img src="assets/img/check.png" alt="">
+                                                <p>Oferecemos serviços que você nem imagina que precisa.
+                                                </p>
+                                            </div>
+                                            <!-- <div data-aos-duration="300" data-aos="zoom-out" data-aos-delay="100" class="item">
+                                            <img src="assets/img/check.png" alt="">
+                                            <p>Formato de <br>
+                                                rede social</p>
+                                        </div> -->
+                                            <div data-aos-duration="300" data-aos="zoom-out" data-aos-delay="200"
+                                                class="item">
+                                                <img src="assets/img/check.png" alt="">
+                                                <p>Aqui você otimiza seu tempo, pois entendemos o quanto ele é valioso
+                                                    para você.</p>
+                                            </div>
+                                            <div data-aos-duration="300" data-aos="zoom-out" data-aos-delay="300"
+                                                class="item">
+                                                <img src="assets/img/check.png" alt="">
+                                                <p>Encontre uma jornada de aprendizado e conteúdo, que facilita seu dia
+                                                    e te coloca no futuro agora.</p>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="column-two">
+                                        <div data-aos-duration="300" data-aos="zoom-out" data-aos-delay="400" class="item">
+                                            <img src="assets/img/check.png" alt="">
+                                            <p>Ferramentas <br>
+                                                inovadoras</p>
+                                        </div>
+                                        <div data-aos-duration="300" data-aos="zoom-out" data-aos-delay="500" class="item">
+                                            <img src="assets/img/check.png" alt="">
+                                            <p>Ampla rede <br>
+                                                de networking</p>
+                                        </div>
+                                        
+                                    </div> -->
+                                    </div>
+                                    <a class="btn-faca-parte" href="https://metadoctors.com.br/app/cadastre-se/"
+                                        style="margin-top: 30px;" id="info-button">Faça parte</a>
+                                </div>
+                            </div>
+
+                            <img id="medico" data-aos-anchor="#sign" data-aos-duration="300" data-aos="zoom-in-down"
+                                data-aos-delay="600" class="img-medico1 naoMostrarMobile" src="assets/img/medico.png"
+                                alt="">
+                        </div>
+                        <div data-aos-duration="300" data-aos-anchor="#info-button" data-aos="fade-right"
+                            data-aos-delay="200" class="content-servicos-digitais">
+                            <div class="servicos-digitais">
+                                <img src="assets/img/logo-metadoctors-responsive-white-2.png" class="md-logo-branca"
+                                    alt="">
+                                <h3 class="gradient-box__title">
+                                    Nosso propósito é <b>facilitar a vida do médico</b> em todos os sentidos.
+                                    Acreditamos que, ao simplificar e enriquecer a experiência professional
+                                    e pessoal dos médicos, podemos contribuir para
+                                    <b>um futuro melhor da saúde no Brasil</b>.
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="servicos">
+                            <div data-aos-duration="300" data-aos="fade-down" data-aos-delay="100">
+                                <div class="bloco">
+                                    <img src="assets/img/icone-criador-de-conteudos.svg" alt="">
+                                    <!-- <h2>Criador de conteudo</h2> -->
+                                    <p>Crie seus posts para redes sociais com alta qualidade, de forma prática e
+                                        simples,
+                                        sem a necessidade de contratação de um profissional. <strong>Mais de 400 modelos
+                                            únicos</strong>,
+                                        organizados por especialidade médica.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div data-aos-duration="300" data-aos="fade-down" data-aos-delay="200">
+                                <div class="bloco">
+                                    <img src="assets/img/icone-beneficios.svg" alt="">
+                                    <!-- <h2>Healthy</h2> -->
+                                    <p>Acesse o maior programa de descontos em medicamentos para seu uso pessoal e de
+                                        familiares. <strong>Descontos de até 77% em medicamentos</strong> de prescrição
+                                        usando apenas seu CPF
+                                        na rede credenciada.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div data-aos-duration="300" data-aos="fade-down" data-aos-delay="300">
+                                <div class="bloco">
+                                    <img src="assets/img/icone-cursos.svg" alt="" style="max-width: 75px;">
+                                    <!-- <h2>Cursos</h2> -->
+                                    <p>Tenha acesso a <strong>conteúdos exclusivos de alta qualidade</strong> voltados a
+                                        tecnologia,
+                                        marketing, administração, finanças e lifestyle do médico. </p>
+                                </div>
+                            </div>
+
+                            <div data-aos-duration="300" data-aos="fade-down" data-aos-delay="400">
+                                <div class="bloco">
+                                    <img src="assets/img/icone-industrias-farm.svg" alt="">
+                                    <!-- <h2>Farmacêuticas</h2> -->
+                                    <p>Interaja diretamente com todas as <strong>indústrias farmacêuticas</strong> e
+                                        conheça seus
+                                        lançamentos. O cadastro mais completo de listas de sites, canais de comunicação
+                                        e
+                                        informações sobre programas de desconto do mercado.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div data-aos-duration="300" data-aos="fade-down" data-aos-delay="500">
+                                <div class="bloco">
+                                    <img src="assets/img/icone-medicamentos.svg" alt="">
+                                    <!-- <h2>Medicamentos</h2> -->
+                                    <p>A maior e mais atualizada <strong>base de medicamentos</strong> com lista de
+                                        preço
+                                        atualizada, bulas e
+                                        classificações para facilitar suas consultas diárias. </p>
+                                </div>
+                            </div>
+
+                            <div data-aos-duration="300" data-aos="fade-down" data-aos-delay="600">
+                                <div class="bloco">
+                                    <img src="assets/img/icone-esg.svg" alt="" style="max-width: 80px;">
+                                    <!-- <h2>ESG</h2> -->
+                                    <p>Participe de programas de <strong>responsabilidade ambiental</strong> e social
+                                        elaborados
+                                        exclusivamente para médicos e de alto impacto para o mercado da saúde. Escolha
+                                        uma ONG para direcionar uma parte das nossas receitas financeiras mensalmente.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="metaBitsContainer" data-aos-duration="200" data-aos="fade-right" data-aos-delay="100"
+                            class="metaBitsContainer">
+                            <div class="hero-slider owl-carousel">
+                                <div class="content item-product">
+                                    <a href="https://metadoctors.com.br/app/">
+                                        <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/metaBits/primeiro-banner.png"
+                                            alt="Conheça o programa de pontos do Super App para médicos">
+                                    </a>
+                                </div>
+                                <div class="content item-product">
+                                    <a href="https://metadoctors.com.br/app/">
+                                        <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/metaBits/segundo-banner.png"
+                                            alt="Troque seus metaBits por produtos e serviços">
+                                    </a>
+                                </div>
+                                <div class="content item-product">
+                                    <a href="https://metadoctors.com.br/app/">
+                                        <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/metaBits/terceiro-banner.png"
+                                            alt="Seus metabits são valiosos!">
+                                    </a>
+                                </div>
+                                <div class="content item-product">
+                                    <a href="https://metadoctors.com.br/app/">
+                                        <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/desktop/metaBits/quarto-banner.png"
+                                            alt="Tudo vira metaBits e metaBits vira tudo">
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="conteiner-chatGPT">
+                                <div class="chatGptnoimage">
+                                    <img class="img-chat" src="assets/img/chatGpt.png" alt="">
+                                    <div class="contSobreGpt">
+                                        <p>
+                                            <strong>ChatGPT</strong> é uma ferramenta de Inteligência Artificial
+                                            com modelo de linguagem desenvolvido pela <strong>OpenAI</strong>,
+                                            baseado na arquitetura GPT (Generative Pre-trained
+                                            Transformer). Projetado para gerar texto de maneira
+                                            coesa e contextual, ele responde a consultas
+                                            e interage em uma linguagem natural e acessível.
+                                        </p>
+                                    </div>
+
+                                    <div class="infosGpt">
+                                        <img src="https://dev.metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/chatgpt/ico1.png"
+                                            alt>
+                                        <div class="escritaGpt">
+                                            <strong>Variedade de dados </strong>
+                                            <p>O chat utiliza uma rica diversidade de dados na internet para
+                                                gerar respostas mais informadas e contextualmente relevantes.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="infosGpt">
+                                        <img src="https://dev.metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/chatgpt/ico2.png"
+                                            alt>
+                                        <div class="escritaGpt">
+                                            <strong>Agilidade e versatilidade </strong>
+                                            <p>As respostas se encaixam nos mais diversos cenários e são
+                                                apresentadas em poucos segundos, permitindo que você adapte
+                                                ou continue a conversa quando precisar.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="infosGpt">
+                                        <img src="https://dev.metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/chatgpt/ico3.png"
+                                            alt>
+                                        <div class="escritaGpt">
+                                            <strong>Assistência na área da saúde </strong>
+                                            <p>Você pode receber informações gerais sobre sintomas,
+                                                orientações de autocuidado e explicar termos médicos
+                                                de maneira acessível que podem ajudar na prática clínica.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="image">
+                                    <img src="https://dev.metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/chatgpt/img-robo.png"
+                                        alt>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div class=" metaBitsContainer hero-slider-mobile owl-carousel" style="padding: 0px;">
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/metaBits/primeiro-banner--mobile.png"
+                                        alt="Conheça o programa de pontos do Super App para médicos">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/metaBits/segundo-banner--mobile.png"
+                                        alt="Troque seus metaBits por produtos e serviços">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/metaBits/terceiro-banner--mobile.png"
+                                        alt="Seus metabits são valiosos!">
+                                </a>
+                            </div>
+                            <div class="content item-product">
+                                <a href="https://metadoctors.com.br/app/">
+                                    <img src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/banners/mobile/metaBits/quarto-banner--mobile.png"
+                                        alt="Tudo vira metaBits e metaBits vira tudo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="testimonials-slider owl-carousel">
+                            <div class="testimonials-slider__wrapper">
+                                <div class="testimonials-slider__wrapper__content">
+                                    <img class="testimonials-slider__image"
+                                        src="app/wp-content/themes/buddyboss-theme/assets/images/institucional/doutor-antonio-issa.png" />
+                                    <div class="testimonials-slider__texts">
+                                        <p class="texts__name"><b>Dr Antonio Augusto Tadeu Issa</b></p>
+                                        <p class="texts__description">Aqui no metaDoctors tive acesso a muitos assuntos
+                                            relevantes e que conversam diretamente com o médico, ensinando desde fazer
+                                            conteúdo digital, como fidelizar pacientes e até como lidar com a questão
+                                            financeira, tema que eu gosto muito.  Diversos benefícios, linguagem muito
+                                            boa e com conteúdos diversificados, relevantes, objetivos e práticos.
+                                            Parabéns! Só vai fazer sucesso.</p>
+                                        <p class="texts__title">Cirurgião Vascular</p>
+                                        <p class="texts__company">Consultório Particular</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-btn">
+                            <div>
+                                <span style="margin: 0.8em;">Mensal</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="checbox" onclick="check()">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span style="margin: 0.8em;">Anual</span>
+                            </div>
+                            <div>
+                                <span class="desconto">economize 20% no ano</span>
+                            </div>
+                        </div>
+
+                        <div class="value">
+
+                            <div class="value-slug-top">
+
+                                <div class="value-free item-animate" data-aos-duration="600" data-aos="flip-left"
+                                    data-aos-delay="100">
+                                    <div class="value-title">
+                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/icon-free.png"
+                                            alt="">
+                                        <h3>Free</h3>
+                                        <span>Viva a prática clínica</br>
+                                            além do consultório e fortaleça relações </br>com a comunidade </br>
+                                            médica</span>
+                                    </div>
+                                    <div class="value-free-benefits">
+                                        <!--Accordion Start-->
+                                        <div class="accordion">
+                                            <!-- First Accordion Start -->
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-1">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/conteudos.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Conteúdo</span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        Acesso Ilimitado
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                                <div id="accordion-1" class="accordion-section-content">
+                                                    <ul>
+                                                        <li>Notícias Diárias</li>
+                                                        <li>Blog</li>
+                                                        <li>e-books</li>
+                                                        <li>Vídeos</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- First Accordion End -->
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-2">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/medicamentos.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Busca de Medicamentos</span>
+                                                        <!-- <span class="arrow"></span> -->
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        Acesso Ilimitado
+                                                    </div>
+                                                    <!-- <span class="arrow"></span> -->
+                                                </a>
+                                                <!-- <div id="accordion-2" class="accordion-section-content">
+                                                <ul>
+                                                    <li>Teste 2</li>
+                                                    <li>Teste 2</li>
+                                                    <li>Teste 2</li>
+                                                </ul>
+                                            </div> -->
+                                            </div>
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-3">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/industrias.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Contato com
+                                                            Indústrias Farmacêuticas</span>
+                                                        <!-- <span class="arrow"></span> -->
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        Acesso Ilimitado
+                                                    </div>
+                                                    <!-- <span class="arrow"></span> -->
+                                                </a>
+                                                <!-- <div id="accordion-2" class="accordion-section-content">
+                                                <ul>
+                                                    <li>Teste 2</li>
+                                                    <li>Teste 2</li>
+                                                    <li>Teste 2</li>
+                                                </ul>
+                                            </div> -->
+                                            </div>
+                                            <!-- Second Accordion Start -->
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-4">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/curso.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Cursos</span>
+                                                        <span class="arrow"></span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn">
+                                                        Acesso Limitado
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                                <div id="accordion-4" class="accordion-section-content">
+                                                    <ul>
+                                                        <li>Gestão para médicos</li>
+                                                        <li>Marketing e mídias digitais</li>
+                                                        <li>Cientista do marketing digital</li>
+                                                        <li>web3</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- Second Accordion End -->
+                                            <!-- Third Accordion Start -->
+                                            <!-- <div class="accordion-section">
+                                      <a class="accordion-section-title" href="#accordion-3">
+                                          <div class="accordions-benefits-icons">
+                                              <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/beneficio.png" alt="" srcset="">
+                                          </div>
+                                          <div class="accordions-benefits-title">
+                                              <span>Ferramentas</span>
+                                          </div>
+                                          <div class="accordions-benefits-btn">
+                                              1 Ferramenta
+                                          </div>
+                                          <span class="arrow"></span>
+                                      </a>
+                                      <div id="accordion-3" class="accordion-section-content">
+                                          <ul>
+                                              <li>Teste 3</li>
+                                              <li>Teste 3</li>
+                                              <li>Teste 3</li>
+                                          </ul>
+                                      </div>
+                                  </div> -->
+
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-5">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/beneficio.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Benefícios</span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn">
+                                                        Acesso Limitado
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                                <div id="accordion-5" class="accordion-section-content">
+                                                    <ul>
+                                                        <li>Desconto em vinhos</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-6">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/criador-de-conteudo.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Ferramenta de criação de conteúdo</span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn">
+                                                        NÃO DISPONÍVEL
+                                                    </div>
+                                                    <!-- <span class="arrow"></span> -->
+                                                </a>
+                                            </div>
+                                            <!-- Third Accordion End -->
+                                        </div>
+                                        <!--Accordion End-->
+
+                                    </div>
+
+                                    <div class="value-free-footer" style="background: #b0b7e2;">
+                                        <div class="value-free-gratis" style="color: #38417b;">
+                                            <h3 style="
+                                            color: #191875;
+                                        ">Grátis</h3>
+                                        </div>
+
+                                        <div class="value-free-btn" style="color: white !important; ">
+                                            <a href="https://metadoctors.com.br/app" style="
+                                            background: #191875;
+                                            color: white;
+                                        ">Continuar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- <div class="value-paid"> -->
+                            <div class="value-pro item-animate" data-aos-duration="600" data-aos="flip-left"
+                                data-aos-delay="100">
+                                <div class="value-free">
+                                    <div class="value-title">
+                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/pro.png"
+                                            alt="">
+                                        <h3>Pro</h3>
+                                        <span>Além do relacionamento com a comunidade médica, aproveite descontos em
+                                            marcas
+                                            parceiras, ferramentas para marketing médico, cursos completos e muito
+                                            mais!</span>
+                                    </div>
+                                    <div class="value-free-benefits">
+                                        <!-- Accordion Start -->
+                                        <div class="accordion">
+                                            <!-- First Accordion Start -->
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-7">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/conteudos.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>conteúdo</span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        Acesso Ilimitado
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                                <div id="accordion-7" class="accordion-section-content">
+                                                    <ul>
+                                                        <li>Notícias Diárias</li>
+                                                        <li>Blog</li>
+                                                        <li>e-books</li>
+                                                        <li>Vídeos</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-8">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/medicamentos.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Busca de Medicamentos</span>
+                                                        <!-- <span class="arrow"></span> -->
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        Acesso Ilimitado
+                                                    </div>
+                                                    <!-- <span class="arrow"></span> -->
+                                                </a>
+                                                <!-- <div id="accordion-2" class="accordion-section-content">
+                                                <ul>
+                                                    <li>Teste 2</li>
+                                                    <li>Teste 2</li>
+                                                    <li>Teste 2</li>
+                                                </ul>
+                                            </div> -->
+                                            </div>
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-9">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/industrias.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Contato com
+                                                            Indústrias Farmacêuticas</span>
+                                                        <!-- <span class="arrow"></span> -->
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        Acesso Ilimitado
+                                                    </div>
+                                                    <!-- <span class="arrow"></span> -->
+                                                </a>
+                                                <!-- <div id="accordion-2" class="accordion-section-content">
+                                                <ul>
+                                                    <li>Teste 2</li>
+                                                    <li>Teste 2</li>
+                                                    <li>Teste 2</li>
+                                                </ul>
+                                            </div> -->
+                                            </div>
+                                            <!-- First Accordion End -->
+                                            <!-- Second Accordion Start -->
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-10">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/curso.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Cursos</span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        Acesso Ilimitado
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                                <div id="accordion-10" class="accordion-section-content">
+                                                    <ul>
+                                                        <li> Gestão para médicos</li>
+                                                        <li> Marketing e mídias digitais</li>
+                                                        <li> Cientista do marketing digital</li>
+                                                        <li> web3</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- Second Accordion End -->
+                                            <!-- Third Accordion Start -->
+                                            <!-- <div class="accordion-section">
+                                              <a class="accordion-section-title" href="#accordion-8">
+                                                  <div class="accordions-benefits-icons">
+                                                      <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/ferramentas.png" alt="" srcset="">
+                                                  </div>
+                                                  <div class="accordions-benefits-title">
+                                                      <span>Ferramentas</span>
+                                                  </div>
+                                                  <div class="accordions-benefits-btn unlimited">
+                                                      ilimitado
+                                                  </div>
+                                                  <span class="arrow"></span>
+                                              </a>
+                                              <div id="accordion-8" class="accordion-section-content">
+                                                  <ul>
+                                                      <li>Teste 3</li>
+                                                      <li>Teste 3</li>
+                                                      <li>Teste 3</li>
+                                                  </ul>
+                                              </div>
+                                          </div> -->
+
+
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-11">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/beneficio.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Benefícios</span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        Acesso ilimitado
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                                <div id="accordion-11" class="accordion-section-content">
+                                                    <ul>
+                                                        <li>Desconto em vinhos</li>
+                                                        <li>Desconto em medicamentos</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-12">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/criador-de-conteudo.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Ferramenta de criação de conteúdo</span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        Acesso ilimitado
+                                                    </div>
+                                                    <!-- <span class="arrow"></span> -->
+                                                </a>
+                                                <!-- <div id="accordion-12" class="accordion-section-content">
+                                                <ul>
+                                                    <li>Teste 3</li>
+                                                    <li>Teste 3</li>
+                                                    <li>Teste 3</li>
+                                                </ul>
+                                            </div> -->
+                                            </div>
+
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-12">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/concierge.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Concierge</span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        Acesso ilimitado
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--Accordion End-->
+                                    </div>
+
+                                    <div style="display: none;" id="text-pro-1" class="value-free-footer">
+                                        <div class="value-free-gratis">
+                                            <spam class="value-reais">R$ 120</spam>
+                                            <spam class="value-cents">/mês</spam>
+                                        </div>
+
+                                        <div class="value-pro-btn">
+                                            <a href="https://metadoctors.com.br/app/registrar/pro-anual/">
+                                                Acesse Já
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex;" id="text-pro-2" class="value-free-footer">
+                                        <div class="value-free-gratis">
+                                            <spam class="value-reais">R$ 150</spam>
+                                            <spam class="value-cents">/mês</spam>
+                                        </div>
+
+                                        <div class="value-pro-btn">
+                                            <a href="https://metadoctors.com.br/app/register/pro/">
+                                                Acesse Já
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="value-premium item-animate" data-aos-duration="600" data-aos="flip-left"
+                                data-aos-delay="100">
+                                <div class="value-free">
+                                    <div class="value-title">
+                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/premiun.png"
+                                            alt="">
+                                        <h3>Premium</h3>
+                                        <span>Benefícios e descontos especiais para vivenciar a prática clínica além do
+                                            consultório e descobrir novos hobbies.</span>
+                                    </div>
+                                    <div class="value-free-benefits">
+                                        <!--Accordion Start-->
+                                        <div class="accordion">
+                                            <!-- First Accordion Start -->
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-11">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/beneficio.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Benefícios</span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        Acesso ilimitado
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                                <div id="accordion-11" class="accordion-section-content">
+                                                    <ul>
+                                                        <li>Teste 1</li>
+                                                        <li>Teste 1</li>
+                                                        <li>Teste 1</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- First Accordion End -->
+                                            <!-- Second Accordion Start -->
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-12">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/curso.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Cursos</span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        ilimitado
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                                <div id="accordion-12" class="accordion-section-content">
+                                                    <ul>
+                                                        <li>Teste 2</li>
+                                                        <li>Teste 2</li>
+                                                        <li>Teste 2</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- Second Accordion End -->
+                                            <!-- Third Accordion Start -->
+                                            <!-- <div class="accordion-section">
+                                      <a class="accordion-section-title" href="#accordion-13">
+                                          <div class="accordions-benefits-icons">
+                                              <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/ferramentas.png" alt="" srcset="">
+                                          </div>
+                                          <div class="accordions-benefits-title">
+                                              <span>Ferramentas</span>
+                                          </div>
+                                          <div class="accordions-benefits-btn unlimited">
+                                              ilimitado
+                                          </div>
+                                          <span class="arrow"></span>
+                                      </a>
+                                      <div id="accordion-13" class="accordion-section-content">
+                                          <ul>
+                                              <li>Teste 3</li>
+                                              <li>Teste 3</li>
+                                              <li>Teste 3</li>
+                                          </ul>
+                                      </div>
+                                  </div> -->
+
+
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-14">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/ferramentas.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Serviços</span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        ilimitado
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                                <div id="accordion-14" class="accordion-section-content">
+                                                    <ul>
+                                                        <li>Teste 3</li>
+                                                        <li>Teste 3</li>
+                                                        <li>Teste 3</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-section">
+                                                <a class="accordion-section-title" href="#accordion-15">
+                                                    <div class="accordions-benefits-icons">
+                                                        <img src="https://metadoctors.com.br/app/wp-content/themes/buddyboss-theme/assets/images/valores/conteudos.png"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="accordions-benefits-title">
+                                                        <span>Conteúdos</span>
+                                                    </div>
+                                                    <div class="accordions-benefits-btn unlimited">
+                                                        ilimitado
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                                <div id="accordion-15" class="accordion-section-content">
+                                                    <ul>
+                                                        <li>Teste 3</li>
+                                                        <li>Teste 3</li>
+                                                        <li>Teste 3</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- Third Accordion End -->
+                                        </div>
+                                        <!--Accordion End-->
+
+                                    </div>
+
+                                    <div style="display: none;" id="text-premiun-1" class="value-free-footer">
+                                        <div class="value-free-gratis">
+                                            <spam class="value-reais">R$ 192</spam>
+                                            <spam class="value-cents">/mês</spam>
+                                        </div>
+
+                                        <div class="value-premiun-btn">
+                                            <a href="https://metadoctors.com.br/register/premium/">Acesse Já</a>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex;" id="text-premiun-2" class="value-free-footer">
+                                        <div class="value-free-gratis">
+                                            <spam class="value-reais">R$ 240</spam>
+                                            <spam class="value-cents">/mês</spam>
+                                        </div>
+
+                                        <div class="value-premiun-btn">
+                                            <a href="https://metadoctors.com.br/register/premium/">Acesse Já</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="content">
+                        <img data-aos-duration="300" data-aos="fade-right" data-aos-delay="100"
+                            src="assets/img/logo-footer.png" alt="">
+                        <h3 data-aos-duration="300" data-aos="fade-left" data-aos-delay="300">
+                            Clube interativo </br>
+                            de experiências e serviços </br>
+                            <strong>exclusivos para médicos</strong>.
+                        </h3>
+                    </div>
+                    <!-- <div data-aos-duration="300" data-aos="fade-up" data-aos-delay="400" class="form">
+                    <h5>Inscreva-se na nossa newsletter</h5>
+                    <form action="">
+                        <input type="text" name="nome" placeholder="Seu nome">
+                        <input class="email" type="text" name="e-mail" placeholder="E-mail">
+                        <button type="submit">Inscrever-se</button>
+                    </form>
+
+                </div> -->
+                    <!-- <p style="text-align: center; width: 100%; margin-bottom: 30px">metaDoctors, uma empresa do grupo <a style="color: #191875; text-decoration: none !important" target="_blank" href="https://www.digitalsolvers.com/">DIGITAL SOLVERS LTDA</a></p> -->
+                </div>
+            </div>
+
+        </section>
+
+
+        <div class="div-footer"></div>
+        <footer class="container">
+            <div class="footer-logo">
+                <img src="" alt="" srcset="/assets/img/logo-metadoctors-white.png">
+                <p>© - Todos os direitos reservados</p>
+
+            </div>
+
+            <div class="footer-links">
+                <p><a href="https://metadoctors.com.br/app/politica-de-postagem/" target="_blank ">Políticas de cookies
+                        e privacidade</a></p>
+                <p><a href="mailto:contato@metadoctors.com">Fale conosco</a></p>
+            </div>
+
+            <div class="footer-social">
+                <a target="_blank" href="https://web.facebook.com/profile.php?id=100095260556144"><img
+                        src="/assets/img/facebook-f.svg" alt="" srcset=""></a>
+                <a target="_blank" href="https://www.instagram.com/_mdoctors/"><img src="/assets/img/instagram.svg"
+                        alt="" srcset=""></a>
+                <a target="_blank" href="https://www.linkedin.com/company/metadoctors/about/"><img
+                        src="/assets/img/linkedin-in.svg" alt="" srcset=""></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCIS0hYr8_dbaGOlv3OD1zBA"><img
+                        src="/assets/img/youtube.svg" alt="" srcset=""></a>
+            </div>
+        </footer>
+        </div>
+
+
+
+
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Owlcarousel -->
+<script src="assets/vendor/owlcarousel/dist/owl.carousel.min.js"></script>
+<!-- Javascript -->
+<script src="assets/js/scripts.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script>
+    AOS.init({ once: true });
+</script>
+
+<script>
+    $('.hero-slider').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: true,
+        fluidSpeed: true,
+        smartSpeed: 700,
+
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+
+    $('.testimonials-slider').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: true,
+        fluidSpeed: true,
+        smartSpeed: 700,
+
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+</script>
+
+<script>
+    $('.hero-slider-mobile').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: true,
+        fluidSpeed: true,
+        smartSpeed: 700,
+
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+    $('.testimonials-slider-mobile').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: true,
+        fluidSpeed: true,
+        smartSpeed: 700,
+
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+</script>
+
+
+
+<script>
+    $(document).ready(function () {
+        function close_accordion_section() {
+            $('.accordion .accordion-section-title').removeClass('active');
+            $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+        }
+
+        $('.accordion-section-title').click(function (e) {
+
+            var currentAttrValue = $(this).attr('href');
+            console.log(e.target);
+
+            if ($(e.target).is('.active')) {
+                close_accordion_section();
+            } else {
+                close_accordion_section();
+
+                $(this).addClass('active');
+
+                $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+            }
+            e.preventDefault();
+        });
+    });
+
+
+</script>
+
+<script type="text/javascript">
+
+    function check() {
+        var checkBox = document.getElementById("checbox");
+        // console.log(checkBox);
+        // document.getElementById("checkbox").checked = false;
+        //   checkBox.checked = false;
+
+        var textPro1 = document.getElementById("text-pro-1");
+        var textPro2 = document.getElementById("text-pro-2");
+
+        var textPremiun1 = document.getElementById("text-premiun-1");
+        var textPremiun2 = document.getElementById("text-premiun-2");
+
+        if (checkBox.checked == true) {
+            textPro1.style.display = "flex";
+            textPremiun1.style.display = "flex";
+
+            textPro2.style.display = "none";
+            textPremiun2.style.display = "none";
+
+            // checkBox.checked = false;
+
+
+
+        } else if (checkBox.checked == false) {
+            textPro1.style.display = "none";
+            textPremiun1.style.display = "none";
+
+            textPro2.style.display = "flex";
+            textPremiun2.style.display = "flex";
+            // certo
+
+            // checkBox.checked = true;
+        }
+    }
+    check();
+
+
+</script>
+
+</html>
